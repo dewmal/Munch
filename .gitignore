@@ -5,3 +5,20 @@
 .DS_Store
 /build
 /captures
+/build/
+/.idea/
+/.gradle/
+*.iml
+
+
+#git rm --cached --force .idea/misc.xml
+#git rm --cached --force .idea/runConfigurations.xml
+#git rm --cached --force .idea/modules.xml
+#git rm --cached --force .idea/gradle.xml
+#git rm --cached --force .idea/copyright/profiles_settings.xml
+#git rm --cached --force .idea/compiler.xml
+#git rm --cached --force .idea/vcs.xml
+#git rm --cached --force Munch.iml
+#git rm --cached --force rssmanager/rssmanager.iml
+#git rm --cached --force app/app.iml
+#git rm --cached --force mindb/mindb.iml
