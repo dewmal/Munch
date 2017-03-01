@@ -13,14 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <ImageButton
-        android:id="@+id/image_button_next"
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/margin_avg"
-        android:background="@drawable/circle_button"
-        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/ic_arrow_forward_24dp" />
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/image_button_next"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/margin_avg"-->
+        <!--android:background="@drawable/circle_button"-->
+        <!--app:srcCompat="@drawable/ic_arrow_forward_24dp" />-->
 
 </android.support.design.widget.CoordinatorLayout>

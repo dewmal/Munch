@@ -2,10 +2,11 @@ package io.egreen.feedreader.wooly.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
-import android.widget.ImageButton;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -19,8 +20,8 @@ public class SplashActivity extends AppCompatActivity implements ViewPager.OnPag
 
     @Bind(R.id.container)
     ViewPager viewPager;
-    @Bind(R.id.image_button_next)
-    ImageButton imgBtnNext;
+    @Bind(R.id.fab)
+    FloatingActionButton fab;
 
     private SplashPagerAdapter mSplashPagerAdapter;
 
@@ -63,13 +64,16 @@ public class SplashActivity extends AppCompatActivity implements ViewPager.OnPag
     public void onPageSelected(int position) {
         switch (position) {
             case 0:
-                imgBtnNext.setImageResource(R.drawable.ic_arrow_forward_24dp);
+                fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_arrow_forward_24dp));
+//                imgBtnNext.setImageResource(R.drawable.ic_arrow_forward_24dp);
                 break;
             case 1:
-                imgBtnNext.setImageResource(R.drawable.ic_arrow_forward_24dp);
+                fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_arrow_forward_24dp));
+//                imgBtnNext.setImageResource(R.drawable.ic_arrow_forward_24dp);
                 break;
             case 2:
-                imgBtnNext.setImageResource(R.drawable.ic_done_24dp);
+                fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_done_24dp));
+//                imgBtnNext.setImageResource(R.drawable.ic_done_24dp);
                 break;
         }
     }
@@ -79,7 +83,7 @@ public class SplashActivity extends AppCompatActivity implements ViewPager.OnPag
 
     }
 
-    @OnClick(R.id.image_button_next)
+    @OnClick(R.id.fab)
     public void OnNext() {
         if (viewPager.getCurrentItem() == 2) {
             SettingsPreferences.setNewInstall(SplashActivity.this);
