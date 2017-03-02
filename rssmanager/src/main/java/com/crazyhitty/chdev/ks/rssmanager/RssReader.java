@@ -2,6 +2,7 @@ package com.crazyhitty.chdev.ks.rssmanager;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -96,8 +97,12 @@ public class RssReader implements OnFeedLoadListener {
 
     @Override
     public void onSuccess(Elements items) {
-        for (Element item : items) {
-            mRssItems.add(getRssItem(item));
+        if (items != null) {
+            for (Element item : items) {
+                mRssItems.add(getRssItem(item));
+            }
+        } else {
+            Toast.makeText(this.mContext, "Error loading feed "+mUrlList[mPosition], Toast.LENGTH_LONG).show();
         }
         mPosition++;
         parseRss(mPosition);

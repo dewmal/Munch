@@ -41,10 +41,12 @@ public class RssParser extends AsyncTask<String, Integer, String> {
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-        if (s.equals("success")) {
-            mOnFeedLoadListener.onSuccess(mItems);
-        } else if (s.equals("failure")) {
-            mOnFeedLoadListener.onFailure("Failed to parse the url\n" + mUrl);
-        }
+        mOnFeedLoadListener.onSuccess(mItems);
+
+//        if (s.equals("success")) {
+//            mOnFeedLoadListener.onSuccess(mItems);
+//        } else if (s.equals("failure")) {
+//            mOnFeedLoadListener.onFailure("Failed to parse the url\n" + mUrl);
+//        }
     }
 }
