@@ -18,6 +18,8 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.socks.library.KLog;
 
 import java.net.URI;
@@ -51,7 +53,7 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
     TextView txtFeedCategory;
     @Bind(R.id.text_view_feed_pub_date)
     TextView txtFeedPubDate;
-//    @Bind(R.id.text_view_content)
+    //    @Bind(R.id.text_view_content)
 //    TextView txtContent;
     @Bind(R.id.content_view)
     WebView webView;
@@ -62,6 +64,7 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
     private boolean mSaved = false;
     private ArticlePresenter mArticlePresenter;
     private FeedsPresenter mFeedsPresenter;
+    private AdView mAdView;
 
 
     @Override
@@ -72,6 +75,11 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
         setSystemTheme(getFeedThemeBgId());
 
         setContentView(R.layout.activity_article);
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         ButterKnife.bind(this);
 

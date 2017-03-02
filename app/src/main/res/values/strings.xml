@@ -403,6 +403,7 @@
 
 
 
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id_home">ca-app-pub-1813863267368130/8681773221</string>
+    <string name="banner_ad_unit_id_article">ca-app-pub-1813863267368130/5728306822</string>
 
 </resources>
