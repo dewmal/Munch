@@ -29,6 +29,8 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.github.clans.fab.FloatingActionMenu;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.List;
@@ -59,8 +61,8 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
     TextView txtToolbarTitle;
     @Bind(R.id.recycler_view_feeds)
     RecyclerView recyclerViewFeeds;
-    @Bind(R.id.fab)
-    FloatingActionMenu fab;
+//    @Bind(R.id.fab)
+//    FloatingActionMenu fab;
     @Bind(R.id.swipe_refresh_layout)
     SwipeRefreshLayout swipeRefreshLayout;
     @Bind(R.id.main_layout)
@@ -94,6 +96,9 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
     private SourceItem mSourceItem;
     private boolean mAddFeedStatus = false;
 
+
+    private AdView mAdView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,6 +111,11 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
 
         setContentView(R.layout.activity_home);
 
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         ButterKnife.bind(HomeActivity.this);
 
         //set theme of other ui elements
@@ -115,7 +125,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
             mSourcesPresenter = new SourcesPresenter(HomeActivity.this, HomeActivity.this);
         }
 
-        fab.setOnMenuToggleListener(this);
+//        fab.setOnMenuToggleListener(this);
 
         setSourcesSpinner();
 
@@ -146,9 +156,9 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
 
     private void setUiElementsTheme() {
         if (!SettingsPreferences.THEME) {
-            fab.setMenuButtonColorNormal(ContextCompat.getColor(HomeActivity.this, R.color.darkColorAccent));
-            fab.setMenuButtonColorPressed(ContextCompat.getColor(HomeActivity.this, R.color.darkColorAccent));
-            fab.setMenuButtonColorRipple(ContextCompat.getColor(HomeActivity.this, R.color.darkColorAccentDark));
+//            fab.setMenuButtonColorNormal(ContextCompat.getColor(HomeActivity.this, R.color.darkColorAccent));
+//            fab.setMenuButtonColorPressed(ContextCompat.getColor(HomeActivity.this, R.color.darkColorAccent));
+//            fab.setMenuButtonColorRipple(ContextCompat.getColor(HomeActivity.this, R.color.darkColorAccentDark));
             secondaryLayout.setBackgroundColor(ContextCompat.getColor(HomeActivity.this, R.color.darkColorAccent));
         }
     }
@@ -166,7 +176,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
                 //new FadeAnimationUtil(HomeActivity.this).fadeInAlpha(spinnerSources, 500);
                 spinnerSources.setVisibility(View.VISIBLE);
                 fragment = new FeedsFragment().setInstance("all_sources");
-                fab.showMenuButton(true);
+//                fab.showMenuButton(true);
                 txtToolbarTitle.setText("Add Feed");
                 txtToolbarTitle.setVisibility(View.INVISIBLE);
             }
@@ -220,7 +230,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
             new FadeAnimationUtil(HomeActivity.this).fadeOutAlpha(spinnerSources, 500);
         }
         //spinnerSources.setVisibility(View.INVISIBLE);
-        fab.hideMenuButton(true);
+//        fab.hideMenuButton(true);
     }
 
     //set the selected fragment onto the screen(activity)
@@ -238,11 +248,11 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
     @Override
     public void onMenuToggle(boolean opened) {
         mAnimationUtil = new AnimationUtil(HomeActivity.this);
-        fab.setEnabled(false);
+//        fab.setEnabled(false);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                fab.setEnabled(true);
+//                fab.setEnabled(true);
             }
         }, 500);
         if (opened) {
@@ -355,7 +365,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
         mSourcesPresenter.getSources();
 
         Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
-        fab.close(true);
+//        fab.close(true);
         enableSecondaryLayout(false);
         //If called instantly after save button is clicked, will make the reveal(hide) animation lag a little bit,
         //so run the animation after a certain period of time.
@@ -482,7 +492,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
                 }
             }, 500);
             mAddFeedStatus = false;
-            fab.close(true);
+//            fab.close(true);
         } else {
             super.onBackPressed();
         }
