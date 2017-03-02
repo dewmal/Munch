@@ -68,13 +68,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/space_avg" />
 
-            <TextView
-                android:id="@+id/text_view_content"
+            <WebView
+                android:id="@+id/content_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/no_content_available"
-                android:textIsSelectable="true"
-                android:textSize="@dimen/text_size_avg" />
+                android:layout_height="fill_parent" />
+
+            <!--<TextView-->
+
+                <!--android:id="@+id/text_view_content"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="@string/no_content_available"-->
+                <!--android:textIsSelectable="true"-->
+                <!--android:textSize="@dimen/text_size_avg" />-->
 
         </LinearLayout>
 

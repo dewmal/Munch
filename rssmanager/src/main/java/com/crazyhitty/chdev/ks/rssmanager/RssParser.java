@@ -31,6 +31,9 @@ public class RssParser extends AsyncTask<String, Integer, String> {
         } catch (IOException e) {
             e.printStackTrace();
             return "failure";
+        } catch (Exception e){
+            e.printStackTrace();
+            return "failure";
         }
         return "success";
     }

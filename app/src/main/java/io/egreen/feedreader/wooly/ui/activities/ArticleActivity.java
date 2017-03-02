@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,7 +18,10 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.bumptech.glide.Glide;
+import com.socks.library.KLog;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 
 import butterknife.Bind;
@@ -47,8 +51,12 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
     TextView txtFeedCategory;
     @Bind(R.id.text_view_feed_pub_date)
     TextView txtFeedPubDate;
-    @Bind(R.id.text_view_content)
-    TextView txtContent;
+//    @Bind(R.id.text_view_content)
+//    TextView txtContent;
+    @Bind(R.id.content_view)
+    WebView webView;
+
+
     @Bind(R.id.image_view_article)
     ImageView imgArticle;
     private boolean mSaved = false;
@@ -85,6 +93,8 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
         //set feed publish date
         txtFeedPubDate.setText(feedItem.getItemPubDate());
 
+
+        KLog.v(feedItem);
         //set feed image
         Glide.with(ArticleActivity.this)
                 .load(feedItem.getItemImgUrl())
@@ -114,7 +124,17 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
         } else {
             mSaved = true;
             fabArchive.setImageResource(R.drawable.ic_archive_done_24dp);
-            txtContent.setText(feedItem.getItemWebDesc());
+
+            KLog.v(feedItem);
+
+            try {
+                Glide.with(this).load(new URI(feedItem.getItemImgUrl())).into(imgArticle);
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            }
+
+
+//            txtContent.setText(feedItem.getItemWebDesc());
         }/* else if(!feedItem.getItemWebDescSync().isEmpty()){
             txtContent.setText(feedItem.getItemWebDescSync());
         }*/
@@ -124,7 +144,7 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
         txtFeedTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_TITLE_SIZE);
         txtFeedCategory.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_CATEGORY_SIZE);
         txtFeedPubDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_PUBLISH_DATE_SIZE);
-        txtContent.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_CONTENT_SIZE);
+//        webView.setWeb.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_CONTENT_SIZE);
     }
 
     private void setToolbar(FeedItem feedItem) {
@@ -223,14 +243,17 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
         if (mSaved) {
             mArticlePresenter.removeArticle(getFeedItem());
         } else {
-            mArticlePresenter.archiveArticle(getFeedItem(), txtContent.getText().toString());
+            mArticlePresenter.archiveArticle(getFeedItem(), getFeedItem().getItemWebDesc().toString());
         }
     }
 
     @Override
     public void onArticleLoaded(String article) {
         //set content of the rss feed item url
-        txtContent.setText(article);
+//        txtContent.setText(article);
+
+        webView.loadUrl(getFeedItem().getItemLink());
+
     }
 
     @Override
@@ -289,7 +312,7 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
         if (id == R.id.action_share) {
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.putExtra(Intent.EXTRA_SUBJECT, getFeedItem().getItemTitle());
-            intent.putExtra(Intent.EXTRA_TEXT, getFeedItem().getItemLink() + "\n\n" + txtContent.getText().toString());
+            intent.putExtra(Intent.EXTRA_TEXT, getFeedItem().getItemLink() + "\n\n" + getFeedItem().getItemWebDesc().toString());
             intent.setType("text/plain");
             startActivity(intent);
             return true;

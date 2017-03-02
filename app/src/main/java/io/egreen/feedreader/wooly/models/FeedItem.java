@@ -126,4 +126,22 @@ public class FeedItem {
     public void setItemWebDescSync(String itemWebDescSync) {
         this.itemWebDescSync = itemWebDescSync;
     }
+
+    @Override
+    public String toString() {
+        return "FeedItem{" +
+                "itemTitle='" + itemTitle + '\'' +
+                ", itemDesc='" + itemDesc + '\'' +
+                ", itemSourceUrl='" + itemSourceUrl + '\'' +
+                ", itemLink='" + itemLink + '\'' +
+                ", itemImgUrl='" + itemImgUrl + '\'' +
+                ", itemCategory='" + itemCategory + '\'' +
+                ", itemSource='" + itemSource + '\'' +
+                ", itemPubDate='" + itemPubDate + '\'' +
+                ", itemWebDesc='" + itemWebDesc + '\'' +
+                ", itemWebDescSync='" + itemWebDescSync + '\'' +
+                ", itemCategoryImgId=" + itemCategoryImgId +
+                ", itemBgId=" + itemBgId +
+                '}';
+    }
 }
