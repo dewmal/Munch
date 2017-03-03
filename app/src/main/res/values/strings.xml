@@ -307,7 +307,7 @@
     <string name="splash_desc_3">Add your own Rss feed sources, manage them and read the articles associated with the feeds</string>
 
     <string name="title_activity_about">About</string>
-    <string name="created_by">Kartik Sharma\n(Aka Chdev)</string>
+    <string name="created_by">E-Green</string>
     <string name="contact_dev">Contact the developer</string>
 
     <string-array name="contacts">
@@ -317,10 +317,10 @@
         <item>Github</item>
     </string-array>
 
-    <string name="dev_mail">cr42yh17m4n@gmail.com</string>
-    <string name="dev_website">http://crazyhitty.com/</string>
-    <string name="dev_google_plus">https://plus.google.com/106736340463642451694</string>
-    <string name="dev_github">https://github.com/crazyhitty/</string>
+    <string name="dev_mail">info@egreen.io</string>
+    <string name="dev_website">http://newsmalla.com/</string>
+    <string name="dev_google_plus">https://plus.google.com/</string>
+    <string name="dev_github">https://github.com/dewmal/</string>
 
     <string name="libraries_used">Libraries Used</string>
     <string name="library">Library</string>
@@ -328,7 +328,7 @@
     <string name="library_desc">Library Desc</string>
     <string name="rate">Rate App</string>
     <string name="source_code">Source Code</string>
-    <string name="github_source_code">https://github.com/crazyhitty/Munch</string>
+    <string name="github_source_code">https://github.com/dewmal/Munch</string>
     <string name="licence">Licence</string>
     <string name="licence_desc"><b>The MIT License (MIT)</b>\n\n<b>Copyright (c) 2015 Kartik Sharma</b>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
     <string name="enter_url">Enter Url</string>
@@ -358,6 +358,7 @@
     </string-array>
 
     <string-array name="library_names">
+        <item>Munch</item>
         <item>Butter Knife</item>
         <item>Jsoup</item>
         <item>Material Dialogs</item>
@@ -369,6 +370,7 @@
     </string-array>
 
     <string-array name="library_descs">
+        <item>A minimalistic Rss Reader for Android devices.</item>
         <item>Field and method binding for Android views which uses annotation processing to generate boilerplate code for you.</item>
         <item>Library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.</item>
         <item>Material Dialogs library allows you to use a consistently Material themed dialog on all versions of Android, along with specific customizations that make it easier to brand the dialog.</item>
@@ -380,6 +382,7 @@
     </string-array>
 
     <string-array name="library_creators">
+        <item>Kartik Sharma</item>
         <item>Jake Wharton</item>
         <item>Jonathan Hedley</item>
         <item>Aidan Follestad</item>
@@ -391,6 +394,7 @@
     </string-array>
 
     <string-array name="library_links">
+        <item>https://github.com/crazyhitty/Munch</item>
         <item>https://github.com/JakeWharton/butterknife</item>
         <item>https://github.com/jhy/jsoup/</item>
         <item>https://github.com/afollestad/material-dialogs</item>

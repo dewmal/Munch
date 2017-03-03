@@ -175,4 +175,8 @@
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColorSecondary">@color/md_grey_500</item>
     </style>
+
+    <style name="AppTheme.BrandedLaunch" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/branded_logo</item>
+    </style>
 </resources>

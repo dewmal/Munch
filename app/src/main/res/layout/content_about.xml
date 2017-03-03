@@ -45,10 +45,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
-                    android:background="@color/md_grey_900"
+                    android:background="@color/md_grey_100"
                     android:padding="@dimen/padding_min"
                     android:text="@string/created_by"
-                    android:textColor="@color/md_grey_100"
+                    android:textColor="@color/md_grey_900"
                     android:textSize="@dimen/text_size_min" />
 
                 <TextView
@@ -57,9 +57,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:background="@color/md_grey_900"
+                    android:background="@color/md_grey_100"
                     android:padding="@dimen/padding_min"
-                    android:textColor="@color/md_grey_100"
+                    android:textColor="@color/md_grey_900"
                     android:textSize="@dimen/text_size_min" />
 
             </RelativeLayout>

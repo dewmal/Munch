@@ -29,7 +29,7 @@ import io.egreen.feedreader.wooly.utils.WebsiteIntentUtil;
 
 public class AboutActivity extends AppCompatActivity {
 
-    private static String EMAIL_SUBJECT = "Munch Feedback";
+    private static String EMAIL_SUBJECT = "NewsMalla Feedback";
     private static String MESSAGE_TYPE = "message/rfc822";
     @Bind(R.id.toolbar)
     Toolbar toolbar;
@@ -175,52 +175,52 @@ public class AboutActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_rate) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("market://details?id=com.crazyhitty.chdev.ks.munch"));
+            intent.setData(Uri.parse("market://details?id=io.egreen.feedreader.wooly"));
             startActivity(intent);
             return true;
         }
 
-        if (id == R.id.action_change_log) {
-            SettingsPreferences.showChangeLog(AboutActivity.this);
-        }
+//        if (id == R.id.action_change_log) {
+//            SettingsPreferences.showChangeLog(AboutActivity.this);
+//        }
+//
+//        if (id == R.id.action_source_code) {
+//            if (SettingsPreferences.IN_APP_BROWSER) {
+//                new WebsiteIntentUtil(AboutActivity.this).loadCustomChromeTabs(getResources().getString(R.string.github_source_code));
+//            } else {
+//                new WebsiteIntentUtil(AboutActivity.this).loadNormalBrowser(getResources().getString(R.string.github_source_code));
+//            }
+//            return true;
+//        }
+//
+//        if (id == R.id.action_contributions) {
+//            MaterialDialog contributionsDialog = new MaterialDialog.Builder(AboutActivity.this)
+//                    .title(R.string.contributions)
+//                    .items(R.array.contributions_arr)
+//                    .content(R.string.contributions_desc)
+//                    .itemsCallback(new MaterialDialog.ListCallback() {
+//                        @Override
+//                        public void onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
+//                            if (SettingsPreferences.IN_APP_BROWSER) {
+//                                new WebsiteIntentUtil(AboutActivity.this).loadCustomChromeTabs(getResources().getStringArray(R.array.contributions_links_arr)[which]);
+//                            } else {
+//                                new WebsiteIntentUtil(AboutActivity.this).loadNormalBrowser(getResources().getStringArray(R.array.contributions_links_arr)[which]);
+//                            }
+//                        }
+//                    })
+//                    .negativeText(R.string.dismiss)
+//                    .build();
+//            contributionsDialog.show();
+//        }
 
-        if (id == R.id.action_source_code) {
-            if (SettingsPreferences.IN_APP_BROWSER) {
-                new WebsiteIntentUtil(AboutActivity.this).loadCustomChromeTabs(getResources().getString(R.string.github_source_code));
-            } else {
-                new WebsiteIntentUtil(AboutActivity.this).loadNormalBrowser(getResources().getString(R.string.github_source_code));
-            }
-            return true;
-        }
-
-        if (id == R.id.action_contributions) {
-            MaterialDialog contributionsDialog = new MaterialDialog.Builder(AboutActivity.this)
-                    .title(R.string.contributions)
-                    .items(R.array.contributions_arr)
-                    .content(R.string.contributions_desc)
-                    .itemsCallback(new MaterialDialog.ListCallback() {
-                        @Override
-                        public void onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
-                            if (SettingsPreferences.IN_APP_BROWSER) {
-                                new WebsiteIntentUtil(AboutActivity.this).loadCustomChromeTabs(getResources().getStringArray(R.array.contributions_links_arr)[which]);
-                            } else {
-                                new WebsiteIntentUtil(AboutActivity.this).loadNormalBrowser(getResources().getStringArray(R.array.contributions_links_arr)[which]);
-                            }
-                        }
-                    })
-                    .negativeText(R.string.dismiss)
-                    .build();
-            contributionsDialog.show();
-        }
-
-        if (id == R.id.action_licence) {
-            MaterialDialog licenceDialog = new MaterialDialog.Builder(AboutActivity.this)
-                    .title(R.string.licence)
-                    .content(R.string.licence_desc)
-                    .negativeText(R.string.dismiss)
-                    .build();
-            licenceDialog.show();
-        }
+//        if (id == R.id.action_licence) {
+//            MaterialDialog licenceDialog = new MaterialDialog.Builder(AboutActivity.this)
+//                    .title(R.string.licence)
+//                    .content(R.string.licence_desc)
+//                    .negativeText(R.string.dismiss)
+//                    .build();
+//            licenceDialog.show();
+//        }
 
         return super.onOptionsItemSelected(item);
     }

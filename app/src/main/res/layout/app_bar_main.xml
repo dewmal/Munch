@@ -49,17 +49,19 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_home" />
+    <include layout="@layout/content_home" android:id="@+id/content_layout" />
 
-    <!--<com.github.clans.fab.FloatingActionMenu-->
-        <!--android:id="@+id/fab"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom|end"-->
-        <!--android:layout_marginBottom="100dp"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--fab:menu_colorNormal="@color/colorAccent"-->
-        <!--fab:menu_colorPressed="@color/colorAccentDark"-->
-        <!--fab:menu_colorRipple="@color/colorAccentLight" />-->
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_margin="@dimen/fab_margin"
+        fab:menu_colorNormal="@color/colorAccent"
+        fab:menu_colorPressed="@color/colorAccentDark"
+        fab:menu_colorRipple="@color/colorAccentLight"
+        android:layout_gravity="bottom|right"
+        app:layout_anchor="@+id/content_layout"
+        app:layout_anchorGravity="center_vertical|right" />
 
 </android.support.design.widget.CoordinatorLayout>
