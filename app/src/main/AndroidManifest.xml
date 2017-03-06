@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="io.egreen.feedreader.wooly">
+    package="io.egreen.feedreader.wooly.feedreader">
 
     <uses-sdk tools:overrideLibrary="android.support.customtabs" />
 
@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="io.egreen.feedreader.wooly.ui.activities.SplashActivity"
+            android:name=".ui.activities.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.BrandedLaunch">
             <intent-filter>
@@ -26,43 +26,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="io.egreen.feedreader.wooly.ui.activities.HomeActivity"
+            android:name=".ui.activities.HomeActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="io.egreen.feedreader.wooly.ui.activities.ArticleActivity"
+            android:name=".ui.activities.ArticleActivity"
             android:label="@string/title_activity_article"
-            android:parentActivityName="io.egreen.feedreader.wooly.ui.activities.HomeActivity"
+            android:parentActivityName=".ui.activities.HomeActivity"
             android:theme="@style/AppThemeCustom.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.egreen.feedreader.wooly.ui.activities.HomeActivity" />
+                android:value=".ui.activities.HomeActivity" />
         </activity>
         <activity
-            android:name="io.egreen.feedreader.wooly.ui.activities.SettingsActivity"
+            android:name=".ui.activities.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName="io.egreen.feedreader.wooly.ui.activities.HomeActivity">
+            android:parentActivityName=".ui.activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.egreen.feedreader.wooly.ui.activities.HomeActivity" />
+                android:value=".ui.activities.HomeActivity" />
         </activity>
         <activity
-            android:name="io.egreen.feedreader.wooly.ui.activities.AboutActivity"
+            android:name=".ui.activities.AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName="io.egreen.feedreader.wooly.ui.activities.HomeActivity"
+            android:parentActivityName=".ui.activities.HomeActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.egreen.feedreader.wooly.ui.activities.HomeActivity" />
+                android:value=".ui.activities.HomeActivity" />
         </activity>
 
         <service
-            android:name="io.egreen.feedreader.wooly.services.SyncArticlesIntentService"
+            android:name=".services.SyncArticlesIntentService"
             android:exported="false" />
 
         <receiver
-            android:name="io.egreen.feedreader.wooly.receivers.SyncArticlesReceiver"
+            android:name=".receivers.SyncArticlesReceiver"
             android:enabled="true"
             android:exported="true"></receiver>
     </application>

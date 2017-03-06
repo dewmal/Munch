@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Newsmalla</string>
+    <string name="app_name">News Master</string>
     <string name="action_settings">Settings</string>
     <string name="loading_feeds">Loading feeds</string>
     <string name="cancel">Cancel</string>

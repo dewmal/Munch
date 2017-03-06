@@ -5,11 +5,11 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "io.egreen.feedreader.wooly"
+        applicationId "io.egreen.feedreader.wooly.feedreader"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 4
-        versionName "1.0.4"
+        versionCode 1
+        versionName "1.0.0"
         vectorDrawables.useSupportLibrary = true
     }
 
