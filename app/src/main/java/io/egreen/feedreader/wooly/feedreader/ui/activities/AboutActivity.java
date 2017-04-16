@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.egreen.feedreader.wooly.feedreader.R;
@@ -31,11 +31,11 @@ public class AboutActivity extends AppCompatActivity {
 
     private static String EMAIL_SUBJECT = "NewsMalla Feedback";
     private static String MESSAGE_TYPE = "message/rfc822";
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.text_view_app_version)
+    @BindView(R.id.text_view_app_version)
     TextView txtAppVersion;
-    @Bind(R.id.recycler_view_libraries)
+    @BindView(R.id.recycler_view_libraries)
     RecyclerView recyclerViewLibraries;
     private RecyclerView.LayoutManager mLayoutManager;
 

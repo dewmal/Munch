@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.egreen.feedreader.wooly.feedreader.R;
 import io.egreen.feedreader.wooly.feedreader.archive.ArchivePresenter;
@@ -28,9 +28,9 @@ import io.egreen.feedreader.wooly.feedreader.utils.FadeAnimationUtil;
  */
 public class ArchiveFragment extends Fragment implements IArchiveView {
 
-    @Bind(R.id.linear_layout_empty_archive)
+    @BindView(R.id.linear_layout_empty_archive)
     LinearLayout linearLayoutEmptyArchive;
-    @Bind(R.id.recycler_view_feeds)
+    @BindView(R.id.recycler_view_feeds)
     RecyclerView recyclerViewFeeds;
 
     private ArchivePresenter mArchivePresenter;

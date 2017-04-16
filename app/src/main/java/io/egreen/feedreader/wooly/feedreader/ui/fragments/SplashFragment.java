@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.egreen.feedreader.wooly.feedreader.R;
 
@@ -20,25 +20,25 @@ import io.egreen.feedreader.wooly.feedreader.R;
 public class SplashFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
-    @Bind(R.id.relative_layout_fragment_splash)
+    @BindView(R.id.relative_layout_fragment_splash)
     RelativeLayout relativeLayoutSplash;
-    @Bind(R.id.text_view_splash_title)
+    @BindView(R.id.text_view_splash_title)
     TextView txtSplashTitle;
-    @Bind(R.id.text_view_splash_desc)
+    @BindView(R.id.text_view_splash_desc)
     TextView txtSplashDesc;
-    @Bind(R.id.image_view_splash)
+    @BindView(R.id.image_view_splash)
     ImageView imgSplash;
-    @Bind(R.id.image_view_empty_dot_1)
+    @BindView(R.id.image_view_empty_dot_1)
     ImageView imgEmptyDot1;
-    @Bind(R.id.image_view_empty_dot_2)
+    @BindView(R.id.image_view_empty_dot_2)
     ImageView imgEmptyDot2;
-    @Bind(R.id.image_view_empty_dot_3)
+    @BindView(R.id.image_view_empty_dot_3)
     ImageView imgEmptyDot3;
-    @Bind(R.id.image_view_selected_dot_1)
+    @BindView(R.id.image_view_selected_dot_1)
     ImageView imgSelectedDot1;
-    @Bind(R.id.image_view_selected_dot_2)
+    @BindView(R.id.image_view_selected_dot_2)
     ImageView imgSelectedDot2;
-    @Bind(R.id.image_view_selected_dot_3)
+    @BindView(R.id.image_view_selected_dot_3)
     ImageView imgSelectedDot3;
 
     /**

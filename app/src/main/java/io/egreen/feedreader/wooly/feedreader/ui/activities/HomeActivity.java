@@ -35,7 +35,7 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.egreen.feedreader.wooly.feedreader.R;
@@ -55,39 +55,39 @@ import io.egreen.feedreader.wooly.feedreader.utils.FadeAnimationUtil;
 
 public class HomeActivity extends AppCompatActivity implements ISourceView, FloatingActionMenu.OnMenuToggleListener, AdapterView.OnItemSelectedListener, NavigationView.OnNavigationItemSelectedListener {
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.text_view_toolbar_title)
+    @BindView(R.id.text_view_toolbar_title)
     TextView txtToolbarTitle;
-    @Bind(R.id.recycler_view_feeds)
+    @BindView(R.id.recycler_view_feeds)
     RecyclerView recyclerViewFeeds;
-    @Bind(R.id.fab)
+    @BindView(R.id.fab)
     FloatingActionMenu fab;
-    @Bind(R.id.swipe_refresh_layout)
+    @BindView(R.id.swipe_refresh_layout)
     SwipeRefreshLayout swipeRefreshLayout;
-    @Bind(R.id.main_layout)
+    @BindView(R.id.main_layout)
     RelativeLayout mainLayout;
-    @Bind(R.id.secondary_layout)
+    @BindView(R.id.secondary_layout)
     RelativeLayout secondaryLayout;
-    @Bind(R.id.material_edit_text_source_name)
+    @BindView(R.id.material_edit_text_source_name)
     MaterialEditText eTxtSourceName;
-    @Bind(R.id.material_edit_text_source_url)
+    @BindView(R.id.material_edit_text_source_url)
     MaterialEditText eTxtSourceUrl;
-    @Bind(R.id.button_category)
+    @BindView(R.id.button_category)
     Button btnCategory;
-    @Bind(R.id.button_save)
+    @BindView(R.id.button_save)
     Button btnSave;
-    @Bind(R.id.image_view_category)
+    @BindView(R.id.image_view_category)
     ImageView imgCategory;
-    @Bind(R.id.text_view_category)
+    @BindView(R.id.text_view_category)
     TextView txtCategory;
-    @Bind(R.id.category_layout)
+    @BindView(R.id.category_layout)
     LinearLayout categoryLayout;
-    @Bind(R.id.spinner_sources)
+    @BindView(R.id.spinner_sources)
     Spinner spinnerSources;
-    @Bind(R.id.nav_view)
+    @BindView(R.id.nav_view)
     NavigationView navigationView;
-    @Bind(R.id.drawer_layout)
+    @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
     int mNavPosition = 0;
     private SourcesPresenter mSourcesPresenter;
@@ -125,6 +125,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
             mSourcesPresenter = new SourcesPresenter(HomeActivity.this, HomeActivity.this);
         }
 
+        if(fab!=null)
         fab.setOnMenuToggleListener(this);
 
         setSourcesSpinner();

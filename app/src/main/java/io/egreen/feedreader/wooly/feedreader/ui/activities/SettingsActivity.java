@@ -33,7 +33,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.egreen.feedreader.wooly.feedreader.R;
 import io.egreen.feedreader.wooly.feedreader.curatedfeeds.CuratedFeedsPresenter;
@@ -64,7 +64,7 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
 
     public static FileChooserDialog sFileChooserDialog;
     private static MaterialProgressBar mMaterialProgressBar;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
 
     @Override

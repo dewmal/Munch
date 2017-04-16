@@ -22,7 +22,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.egreen.feedreader.wooly.feedreader.R;
 import io.egreen.feedreader.wooly.feedreader.feeds.FeedsPresenter;
@@ -39,11 +39,11 @@ import io.egreen.feedreader.wooly.feedreader.utils.NetworkConnectionUtil;
  */
 public class FeedsFragment extends Fragment implements IFeedsView, SwipeRefreshLayout.OnRefreshListener {
 
-    @Bind(R.id.linear_layout_empty_feeds)
+    @BindView(R.id.linear_layout_empty_feeds)
     LinearLayout linearLayoutEmptyFeeds;
-    @Bind(R.id.swipe_refresh_layout)
+    @BindView(R.id.swipe_refresh_layout)
     SwipeRefreshLayout swipeRefreshLayout;
-    @Bind(R.id.recycler_view_feeds)
+    @BindView(R.id.recycler_view_feeds)
     RecyclerView recyclerViewFeeds;
 
     private FeedsPresenter mFeedsPresenter;

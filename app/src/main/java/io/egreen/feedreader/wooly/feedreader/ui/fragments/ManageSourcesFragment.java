@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.egreen.feedreader.wooly.feedreader.R;
 import io.egreen.feedreader.wooly.feedreader.models.SourceItem;
@@ -26,7 +26,7 @@ import io.egreen.feedreader.wooly.feedreader.utils.ItemDecorationUtil;
  * Created by Kartik_ch on 12/6/2015.
  */
 public class ManageSourcesFragment extends Fragment implements ISourceView {
-    @Bind(R.id.recycler_view_sources)
+    @BindView(R.id.recycler_view_sources)
     RecyclerView recyclerViewSources;
 
     private SourcesRecyclerViewAdapter mSourcesRecyclerViewAdapter;

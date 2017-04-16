@@ -11,6 +11,11 @@ android {
         versionCode 1
         versionName "1.0.0"
         vectorDrawables.useSupportLibrary = true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
     }
 
     buildTypes {
@@ -44,7 +49,6 @@ dependencies {
     compile 'com.android.support:design:25.2.0'
     compile 'com.android.support:recyclerview-v7:25.2.0'
     compile 'com.android.support:cardview-v7:25.2.0'
-    compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.github.clans:fab:1.6.1'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile 'com.github.bumptech.glide:glide:3.6.1'
@@ -55,6 +59,9 @@ dependencies {
     compile 'com.google.firebase:firebase-ads:10.2.0'
     compile 'com.google.firebase:firebase-core:10.2.0'
     testCompile 'junit:junit:4.12'
+
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }
 
 

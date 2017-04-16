@@ -8,7 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.egreen.feedreader.wooly.feedreader.R;
@@ -18,9 +18,9 @@ import io.egreen.feedreader.wooly.feedreader.utils.FadePageTransformerUtil;
 
 public class SplashActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
-    @Bind(R.id.container)
+    @BindView(R.id.container)
     ViewPager viewPager;
-    @Bind(R.id.fab)
+    @BindView(R.id.fab)
     FloatingActionButton fab;
 
     private SplashPagerAdapter mSplashPagerAdapter;

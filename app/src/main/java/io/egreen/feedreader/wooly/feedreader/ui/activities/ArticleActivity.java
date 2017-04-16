@@ -26,7 +26,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.egreen.feedreader.wooly.feedreader.R;
@@ -43,23 +43,23 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
 
     private static final String EXTRA_CUSTOM_TABS_SESSION = "android.support.customtabs.extra.SESSION";
     private static final String EXTRA_CUSTOM_TABS_TOOLBAR_COLOR = "android.support.customtabs.extra.TOOLBAR_COLOR";
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.fab_archive)
+    @BindView(R.id.fab_archive)
     FloatingActionButton fabArchive;
-    @Bind(R.id.text_view_feed_title)
+    @BindView(R.id.text_view_feed_title)
     TextView txtFeedTitle;
-    @Bind(R.id.text_view_feed_category)
+    @BindView(R.id.text_view_feed_category)
     TextView txtFeedCategory;
-    @Bind(R.id.text_view_feed_pub_date)
+    @BindView(R.id.text_view_feed_pub_date)
     TextView txtFeedPubDate;
-    //    @Bind(R.id.text_view_content)
+    //    @BindView(R.id.text_view_content)
 //    TextView txtContent;
-    @Bind(R.id.content_view)
+    @BindView(R.id.content_view)
     WebView webView;
 
 
-    @Bind(R.id.image_view_article)
+    @BindView(R.id.image_view_article)
     ImageView imgArticle;
     private boolean mSaved = false;
     private ArticlePresenter mArticlePresenter;
