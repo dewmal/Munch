@@ -12,16 +12,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import io.egreen.feedreader.wooly.feedreader.R;
-import io.egreen.feedreader.wooly.feedreader.models.Categories;
-import io.egreen.feedreader.wooly.feedreader.models.FeedItem;
-import io.egreen.feedreader.wooly.feedreader.models.SettingsPreferences;
-import io.egreen.feedreader.wooly.feedreader.ui.activities.ArticleActivity;
-import io.egreen.feedreader.wooly.feedreader.utils.FadeAnimationUtil;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import io.egreen.feedreader.wooly.feedreader.R;
+import io.egreen.feedreader.wooly.feedreader.models.FeedItem;
+import io.egreen.feedreader.wooly.feedreader.models.SettingsPreferences;
+import io.egreen.feedreader.wooly.feedreader.ui.activities.ArticleActivity;
+import io.egreen.feedreader.wooly.feedreader.utils.FadeAnimationUtil;
 
 /**
  * Created by Kartik_ch on 11/5/2015.
@@ -56,14 +57,27 @@ public class FeedsRecyclerViewAdapter extends RecyclerView.Adapter<FeedsRecycler
         holder.mTxtCategory.setText(mFeedItems.get(position).getItemCategory());
         holder.mTxtPubDate.setText(mFeedItems.get(position).getItemPubDate());
         //holder.mImgCategory.setImageResource(mFeedItems.get(position).getItemCategoryImgId());
-        holder.mImgCategory.setImageResource(new Categories(mContext).getDrawableId(mFeedItems.get(position).getItemCategory()));
+
+
+//
+
+
+//        holder.mImgCategory.setImageResource(new Categories(mContext).getDrawableId(mFeedItems.get(position).getItemCategory()));
 
         //get a randomized background resource id from a set of available drawables
         mCurrentCircleBgId = mColorDrawables.get(getRandomIndex(0, mColorDrawables.size() - 1));
         //set this drawable in feeditem
         mFeedItems.get(position).setItemBgId(mCurrentCircleBgId);
-        //set the retrieved drawable into the category image view background
-        holder.mImgCategoryBg.setImageResource(mCurrentCircleBgId);
+
+
+        Glide.with(mContext)
+                .load( mFeedItems.get(position).getItemImgUrl())
+                .centerCrop()
+                .crossFade()
+                .placeholder(mCurrentCircleBgId)
+                .into(holder.mImgCategoryBg);
+
+
 
         //add fading animation as the items start loading
         if (SettingsPreferences.FEEDS_RECYCLER_VIEW_ANIMATION) {
@@ -189,6 +203,8 @@ public class FeedsRecyclerViewAdapter extends RecyclerView.Adapter<FeedsRecycler
             mTxtPubDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.FEED_PUBLISH_DATE_SIZE);
             mTxtTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.FEED_TITLE_SIZE);
         }
+
+
 
     }
 }
