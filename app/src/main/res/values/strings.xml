@@ -299,7 +299,7 @@
     <string name="no_content_available">No Content Available</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="splash_title_1">NewsMalla</string>
+    <string name="splash_title_1">Newsmaster</string>
     <string name="splash_title_2">Read RSS feeds easily</string>
     <string name="splash_title_3">Manage, Archive and share your feeds</string>
     <string name="splash_desc_1">A Minimalistic News Reader</string>
@@ -318,7 +318,7 @@
     </string-array>
 
     <string name="dev_mail">info@egreen.io</string>
-    <string name="dev_website">http://newsmalla.com/</string>
+    <string name="dev_website">http://newsmaster.co.uk/</string>
     <string name="dev_google_plus">https://plus.google.com/</string>
     <string name="dev_github">https://github.com/dewmal/</string>
 

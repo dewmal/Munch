@@ -29,7 +29,7 @@ import io.egreen.feedreader.wooly.feedreader.utils.WebsiteIntentUtil;
 
 public class AboutActivity extends AppCompatActivity {
 
-    private static String EMAIL_SUBJECT = "NewsMalla Feedback";
+    private static String EMAIL_SUBJECT = "Newsmaster Feedback";
     private static String MESSAGE_TYPE = "message/rfc822";
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -175,7 +175,7 @@ public class AboutActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_rate) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("market://details?id=io.egreen.feedreader.wooly"));
+            intent.setData(Uri.parse("market://details?id=io.egreen.feedreader.wooly.feedreader"));
             startActivity(intent);
             return true;
         }
