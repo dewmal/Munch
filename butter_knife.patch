@@ -1,0 +1,1079 @@
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ .idea/gradle.xml	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -3,7 +3,7 @@
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+-        <option name="distributionType" value="LOCAL" />
++        <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+         <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1" />
+         <option name="modules">
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ .idea/misc.xml	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -1,8 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="EntryPointsManager">
+-    <entry_points version="2.0" />
+-  </component>
+   <component name="NullableNotNullManager">
+     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
+     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
+@@ -27,17 +24,7 @@
+       </value>
+     </option>
+   </component>
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+-    <OptionsSetting value="true" id="Add" />
+-    <OptionsSetting value="true" id="Remove" />
+-    <OptionsSetting value="true" id="Checkout" />
+-    <OptionsSetting value="true" id="Update" />
+-    <OptionsSetting value="true" id="Status" />
+-    <OptionsSetting value="true" id="Edit" />
+-    <ConfirmationsSetting value="0" id="Add" />
+-    <ConfirmationsSetting value="0" id="Remove" />
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/app.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/app.iml	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/app.iml	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -22,7 +22,7 @@
+       </configuration>
+     </facet>
+   </component>
+-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
+     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
+     <exclude-output />
+@@ -90,7 +90,6 @@
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-support" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/restart-dex" />
+@@ -100,12 +99,10 @@
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
+       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/reports" />
+       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
+     </content>
+     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />
+     <orderEntry type="library" exported="" name="jsoup-1.7.2" level="project" />
+     <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />
+     <orderEntry type="library" exported="" name="firebase-analytics-10.2.0" level="project" />
+@@ -130,6 +127,7 @@
+     <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
+     <orderEntry type="library" exported="" name="library-2.1.4" level="project" />
+     <orderEntry type="library" exported="" name="play-services-ads-10.2.0" level="project" />
++    <orderEntry type="library" exported="" name="butterknife-annotations-8.5.1" level="project" />
+     <orderEntry type="library" exported="" name="firebase-analytics-impl-10.2.0" level="project" />
+     <orderEntry type="library" exported="" name="firebase-common-10.2.0" level="project" />
+     <orderEntry type="library" exported="" name="play-services-basement-10.2.0" level="project" />
+@@ -140,6 +138,7 @@
+     <orderEntry type="library" exported="" name="support-media-compat-25.2.0" level="project" />
+     <orderEntry type="library" exported="" name="firebase-ads-10.2.0" level="project" />
+     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
++    <orderEntry type="library" exported="" name="butterknife-8.5.1" level="project" />
+     <orderEntry type="library" exported="" name="appcompat-v7-25.2.0" level="project" />
+     <orderEntry type="library" exported="" name="recyclerview-v7-25.2.0" level="project" />
+     <orderEntry type="library" exported="" name="fab-1.6.1" level="project" />
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/build.gradle	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -11,6 +11,11 @@
+         versionCode 1
+         versionName "1.0.0"
+         vectorDrawables.useSupportLibrary = true
++        javaCompileOptions {
++            annotationProcessorOptions {
++                includeCompileClasspath false
++            }
++        }
+     }
+ 
+     buildTypes {
+@@ -55,6 +60,9 @@
+     compile 'com.google.firebase:firebase-ads:10.2.0'
+     compile 'com.google.firebase:firebase-core:10.2.0'
+     testCompile 'junit:junit:4.12'
++
++    compile 'com.jakewharton:butterknife:8.5.1'
++    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+ }
+ 
+ 
+Index: app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/AboutActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/AboutActivity.java	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/AboutActivity.java	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -18,7 +18,7 @@
+ 
+ import com.afollestad.materialdialogs.MaterialDialog;
+ 
+-import butterknife.Bind;
++import butterknife.BindView;
+ import butterknife.ButterKnife;
+ import butterknife.OnClick;
+ import io.egreen.feedreader.wooly.feedreader.R;
+@@ -31,11 +31,11 @@
+ 
+     private static String EMAIL_SUBJECT = "NewsMalla Feedback";
+     private static String MESSAGE_TYPE = "message/rfc822";
+-    @Bind(R.id.toolbar)
++    @BindView(R.id.toolbar)
+     Toolbar toolbar;
+-    @Bind(R.id.text_view_app_version)
++    @BindView(R.id.text_view_app_version)
+     TextView txtAppVersion;
+-    @Bind(R.id.recycler_view_libraries)
++    @BindView(R.id.recycler_view_libraries)
+     RecyclerView recyclerViewLibraries;
+     private RecyclerView.LayoutManager mLayoutManager;
+ 
+Index: app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/ArticleActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/ArticleActivity.java	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/ArticleActivity.java	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -26,7 +26,7 @@
+ import java.net.URISyntaxException;
+ import java.util.List;
+ 
+-import butterknife.Bind;
++import butterknife.BindView;
+ import butterknife.ButterKnife;
+ import butterknife.OnClick;
+ import io.egreen.feedreader.wooly.feedreader.R;
+@@ -43,23 +43,23 @@
+ 
+     private static final String EXTRA_CUSTOM_TABS_SESSION = "android.support.customtabs.extra.SESSION";
+     private static final String EXTRA_CUSTOM_TABS_TOOLBAR_COLOR = "android.support.customtabs.extra.TOOLBAR_COLOR";
+-    @Bind(R.id.toolbar)
++    @BindView(R.id.toolbar)
+     Toolbar toolbar;
+-    @Bind(R.id.fab_archive)
++    @BindView(R.id.fab_archive)
+     FloatingActionButton fabArchive;
+-    @Bind(R.id.text_view_feed_title)
++    @BindView(R.id.text_view_feed_title)
+     TextView txtFeedTitle;
+-    @Bind(R.id.text_view_feed_category)
++    @BindView(R.id.text_view_feed_category)
+     TextView txtFeedCategory;
+-    @Bind(R.id.text_view_feed_pub_date)
++    @BindView(R.id.text_view_feed_pub_date)
+     TextView txtFeedPubDate;
+-    //    @Bind(R.id.text_view_content)
++    //    @BindView(R.id.text_view_content)
+ //    TextView txtContent;
+-    @Bind(R.id.content_view)
++    @BindView(R.id.content_view)
+     WebView webView;
+ 
+ 
+-    @Bind(R.id.image_view_article)
++    @BindView(R.id.image_view_article)
+     ImageView imgArticle;
+     private boolean mSaved = false;
+     private ArticlePresenter mArticlePresenter;
+Index: app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/HomeActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/HomeActivity.java	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/HomeActivity.java	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -35,7 +35,7 @@
+ 
+ import java.util.List;
+ 
+-import butterknife.Bind;
++import butterknife.BindView;
+ import butterknife.ButterKnife;
+ import butterknife.OnClick;
+ import io.egreen.feedreader.wooly.feedreader.R;
+@@ -55,39 +55,39 @@
+ 
+ public class HomeActivity extends AppCompatActivity implements ISourceView, FloatingActionMenu.OnMenuToggleListener, AdapterView.OnItemSelectedListener, NavigationView.OnNavigationItemSelectedListener {
+ 
+-    @Bind(R.id.toolbar)
++    @BindView(R.id.toolbar)
+     Toolbar toolbar;
+-    @Bind(R.id.text_view_toolbar_title)
++    @BindView(R.id.text_view_toolbar_title)
+     TextView txtToolbarTitle;
+-    @Bind(R.id.recycler_view_feeds)
++    @BindView(R.id.recycler_view_feeds)
+     RecyclerView recyclerViewFeeds;
+-    @Bind(R.id.fab)
++    @BindView(R.id.fab)
+     FloatingActionMenu fab;
+-    @Bind(R.id.swipe_refresh_layout)
++    @BindView(R.id.swipe_refresh_layout)
+     SwipeRefreshLayout swipeRefreshLayout;
+-    @Bind(R.id.main_layout)
++    @BindView(R.id.main_layout)
+     RelativeLayout mainLayout;
+-    @Bind(R.id.secondary_layout)
++    @BindView(R.id.secondary_layout)
+     RelativeLayout secondaryLayout;
+-    @Bind(R.id.material_edit_text_source_name)
++    @BindView(R.id.material_edit_text_source_name)
+     MaterialEditText eTxtSourceName;
+-    @Bind(R.id.material_edit_text_source_url)
++    @BindView(R.id.material_edit_text_source_url)
+     MaterialEditText eTxtSourceUrl;
+-    @Bind(R.id.button_category)
++    @BindView(R.id.button_category)
+     Button btnCategory;
+-    @Bind(R.id.button_save)
++    @BindView(R.id.button_save)
+     Button btnSave;
+-    @Bind(R.id.image_view_category)
++    @BindView(R.id.image_view_category)
+     ImageView imgCategory;
+-    @Bind(R.id.text_view_category)
++    @BindView(R.id.text_view_category)
+     TextView txtCategory;
+-    @Bind(R.id.category_layout)
++    @BindView(R.id.category_layout)
+     LinearLayout categoryLayout;
+-    @Bind(R.id.spinner_sources)
++    @BindView(R.id.spinner_sources)
+     Spinner spinnerSources;
+-    @Bind(R.id.nav_view)
++    @BindView(R.id.nav_view)
+     NavigationView navigationView;
+-    @Bind(R.id.drawer_layout)
++    @BindView(R.id.drawer_layout)
+     DrawerLayout drawer;
+     int mNavPosition = 0;
+     private SourcesPresenter mSourcesPresenter;
+@@ -125,6 +125,7 @@
+             mSourcesPresenter = new SourcesPresenter(HomeActivity.this, HomeActivity.this);
+         }
+ 
++        if(fab!=null)
+         fab.setOnMenuToggleListener(this);
+ 
+         setSourcesSpinner();
+Index: app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/SettingsActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/SettingsActivity.java	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/SettingsActivity.java	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -33,7 +33,7 @@
+ import java.util.List;
+ import java.util.Set;
+ 
+-import butterknife.Bind;
++import butterknife.BindView;
+ import butterknife.ButterKnife;
+ import io.egreen.feedreader.wooly.feedreader.R;
+ import io.egreen.feedreader.wooly.feedreader.curatedfeeds.CuratedFeedsPresenter;
+@@ -64,7 +64,7 @@
+ 
+     public static FileChooserDialog sFileChooserDialog;
+     private static MaterialProgressBar mMaterialProgressBar;
+-    @Bind(R.id.toolbar)
++    @BindView(R.id.toolbar)
+     Toolbar toolbar;
+ 
+     @Override
+Index: app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/SplashActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/SplashActivity.java	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/activities/SplashActivity.java	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -8,7 +8,7 @@
+ import android.support.v7.app.AppCompatActivity;
+ import android.view.WindowManager;
+ 
+-import butterknife.Bind;
++import butterknife.BindView;
+ import butterknife.ButterKnife;
+ import butterknife.OnClick;
+ import io.egreen.feedreader.wooly.feedreader.R;
+@@ -18,9 +18,9 @@
+ 
+ public class SplashActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
+ 
+-    @Bind(R.id.container)
++    @BindView(R.id.container)
+     ViewPager viewPager;
+-    @Bind(R.id.fab)
++    @BindView(R.id.fab)
+     FloatingActionButton fab;
+ 
+     private SplashPagerAdapter mSplashPagerAdapter;
+Index: app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/ArchiveFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/ArchiveFragment.java	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/ArchiveFragment.java	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -14,7 +14,7 @@
+ 
+ import java.util.List;
+ 
+-import butterknife.Bind;
++import butterknife.BindView;
+ import butterknife.ButterKnife;
+ import io.egreen.feedreader.wooly.feedreader.R;
+ import io.egreen.feedreader.wooly.feedreader.archive.ArchivePresenter;
+@@ -28,9 +28,9 @@
+  */
+ public class ArchiveFragment extends Fragment implements IArchiveView {
+ 
+-    @Bind(R.id.linear_layout_empty_archive)
++    @BindView(R.id.linear_layout_empty_archive)
+     LinearLayout linearLayoutEmptyArchive;
+-    @Bind(R.id.recycler_view_feeds)
++    @BindView(R.id.recycler_view_feeds)
+     RecyclerView recyclerViewFeeds;
+ 
+     private ArchivePresenter mArchivePresenter;
+Index: app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/FeedsFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/FeedsFragment.java	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/FeedsFragment.java	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -22,7 +22,7 @@
+ 
+ import java.util.List;
+ 
+-import butterknife.Bind;
++import butterknife.BindView;
+ import butterknife.ButterKnife;
+ import io.egreen.feedreader.wooly.feedreader.R;
+ import io.egreen.feedreader.wooly.feedreader.feeds.FeedsPresenter;
+@@ -39,11 +39,11 @@
+  */
+ public class FeedsFragment extends Fragment implements IFeedsView, SwipeRefreshLayout.OnRefreshListener {
+ 
+-    @Bind(R.id.linear_layout_empty_feeds)
++    @BindView(R.id.linear_layout_empty_feeds)
+     LinearLayout linearLayoutEmptyFeeds;
+-    @Bind(R.id.swipe_refresh_layout)
++    @BindView(R.id.swipe_refresh_layout)
+     SwipeRefreshLayout swipeRefreshLayout;
+-    @Bind(R.id.recycler_view_feeds)
++    @BindView(R.id.recycler_view_feeds)
+     RecyclerView recyclerViewFeeds;
+ 
+     private FeedsPresenter mFeedsPresenter;
+Index: app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/ManageSourcesFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/ManageSourcesFragment.java	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/ManageSourcesFragment.java	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -13,7 +13,7 @@
+ 
+ import java.util.List;
+ 
+-import butterknife.Bind;
++import butterknife.BindView;
+ import butterknife.ButterKnife;
+ import io.egreen.feedreader.wooly.feedreader.R;
+ import io.egreen.feedreader.wooly.feedreader.models.SourceItem;
+@@ -26,7 +26,7 @@
+  * Created by Kartik_ch on 12/6/2015.
+  */
+ public class ManageSourcesFragment extends Fragment implements ISourceView {
+-    @Bind(R.id.recycler_view_sources)
++    @BindView(R.id.recycler_view_sources)
+     RecyclerView recyclerViewSources;
+ 
+     private SourcesRecyclerViewAdapter mSourcesRecyclerViewAdapter;
+Index: app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/SplashFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/SplashFragment.java	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ app/src/main/java/io/egreen/feedreader/wooly/feedreader/ui/fragments/SplashFragment.java	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -10,7 +10,7 @@
+ import android.widget.RelativeLayout;
+ import android.widget.TextView;
+ 
+-import butterknife.Bind;
++import butterknife.BindView;
+ import butterknife.ButterKnife;
+ import io.egreen.feedreader.wooly.feedreader.R;
+ 
+@@ -20,25 +20,25 @@
+ public class SplashFragment extends Fragment {
+ 
+     private static final String ARG_SECTION_NUMBER = "section_number";
+-    @Bind(R.id.relative_layout_fragment_splash)
++    @BindView(R.id.relative_layout_fragment_splash)
+     RelativeLayout relativeLayoutSplash;
+-    @Bind(R.id.text_view_splash_title)
++    @BindView(R.id.text_view_splash_title)
+     TextView txtSplashTitle;
+-    @Bind(R.id.text_view_splash_desc)
++    @BindView(R.id.text_view_splash_desc)
+     TextView txtSplashDesc;
+-    @Bind(R.id.image_view_splash)
++    @BindView(R.id.image_view_splash)
+     ImageView imgSplash;
+-    @Bind(R.id.image_view_empty_dot_1)
++    @BindView(R.id.image_view_empty_dot_1)
+     ImageView imgEmptyDot1;
+-    @Bind(R.id.image_view_empty_dot_2)
++    @BindView(R.id.image_view_empty_dot_2)
+     ImageView imgEmptyDot2;
+-    @Bind(R.id.image_view_empty_dot_3)
++    @BindView(R.id.image_view_empty_dot_3)
+     ImageView imgEmptyDot3;
+-    @Bind(R.id.image_view_selected_dot_1)
++    @BindView(R.id.image_view_selected_dot_1)
+     ImageView imgSelectedDot1;
+-    @Bind(R.id.image_view_selected_dot_2)
++    @BindView(R.id.image_view_selected_dot_2)
+     ImageView imgSelectedDot2;
+-    @Bind(R.id.image_view_selected_dot_3)
++    @BindView(R.id.image_view_selected_dot_3)
+     ImageView imgSelectedDot3;
+ 
+     /**
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ build.gradle	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -5,7 +5,7 @@
+         jcenter()
+     }
+     dependencies {
+-        classpath 'com.android.tools.build:gradle:2.3.0'
++        classpath 'com.android.tools.build:gradle:2.4.0-alpha6'
+ 
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gradle/wrapper/gradle-wrapper.properties	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ gradle/wrapper/gradle-wrapper.properties	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -1,6 +1,6 @@
+-#Sat Mar 04 05:52:57 IST 2017
++#Sun Apr 16 08:50:20 IST 2017
+ distributionBase=GRADLE_USER_HOME
+ distributionPath=wrapper/dists
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-3.3-all.zip
++distributionUrl=https\://services.gradle.org/distributions/gradle-3.4.1-all.zip
+Index: mindb/mindb.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- mindb/mindb.iml	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ mindb/mindb.iml	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -23,7 +23,7 @@
+       </configuration>
+     </facet>
+   </component>
+-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
+     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
+     <exclude-output />
+@@ -63,13 +63,6 @@
+       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
+       <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
+@@ -77,6 +70,13 @@
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotations" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
+@@ -84,8 +84,10 @@
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
+Index: rssmanager/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- rssmanager/build.gradle	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ rssmanager/build.gradle	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -1,7 +1,7 @@
+ apply plugin: 'com.android.library'
+ 
+ android {
+-    compileSdkVersion 23
++    compileSdkVersion 25
+     buildToolsVersion '25.0.0'
+ 
+     defaultConfig {
+@@ -25,7 +25,7 @@
+ dependencies {
+     compile fileTree(dir: 'libs', include: ['*.jar'])
+     testCompile 'junit:junit:4.12'
+-    compile 'com.android.support:appcompat-v7:23.1.0'
++    compile 'com.android.support:appcompat-v7:25.2.0'
+     compile 'org.jsoup:jsoup:1.7.2'
+     compile('com.github.afollestad.material-dialogs:core:0.8.5.6@aar') {
+         transitive = true
+Index: rssmanager/rssmanager.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- rssmanager/rssmanager.iml	(revision 32ce48ff9fcee34e0434915460be38b6955b3b11)
++++ rssmanager/rssmanager.iml	(revision ffa6e0ad2d5f0e38a492cb6bf9e48fcf5b0e9375)
+@@ -23,7 +23,7 @@
+       </configuration>
+     </facet>
+   </component>
+-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
+     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
+     <exclude-output />
+@@ -84,21 +84,22 @@
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
+       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
++    <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+     <orderEntry type="library" exported="" name="core-0.8.5.6" level="project" />
+     <orderEntry type="library" exported="" name="jsoup-1.7.2" level="project" />
+     <orderEntry type="library" exported="" name="support-v4-25.2.0" level="project" />
+     <orderEntry type="library" exported="" name="support-compat-25.2.0" level="project" />
+-    <orderEntry type="library" exported="" name="support-v4-23.2.0" level="project" />
+     <orderEntry type="library" exported="" name="library-1.1.4" level="project" />
+     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.3" level="project" />
+     <orderEntry type="library" exported="" name="support-media-compat-25.2.0" level="project" />
+@@ -106,10 +107,7 @@
+     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
+     <orderEntry type="library" exported="" name="appcompat-v7-25.2.0" level="project" />
+     <orderEntry type="library" exported="" name="recyclerview-v7-25.2.0" level="project" />
+-    <orderEntry type="library" exported="" name="support-annotations-23.2.0" level="project" />
+-    <orderEntry type="library" exported="" name="appcompat-v7-23.2.0" level="project" />
+-    <orderEntry type="library" exported="" name="animated-vector-drawable-23.2.0" level="project" />
+-    <orderEntry type="library" exported="" name="support-vector-drawable-23.2.0" level="project" />
++    <orderEntry type="library" exported="" name="support-annotations-25.2.0" level="project" />
+     <orderEntry type="library" exported="" name="support-vector-drawable-25.2.0" level="project" />
+     <orderEntry type="library" exported="" name="support-core-utils-25.2.0" level="project" />
+     <orderEntry type="library" exported="" name="support-fragment-25.2.0" level="project" />
+diff --git app/src/main/res/drawable-nodpi/munch_about.png app/src/main/res/drawable-nodpi/munch_about.png
+index ded991e49b24d358f7662e7d86607e31dd99a699..8be7b62d366d48d59c5778b4188a822e6b7b68f1
+GIT binary patch
+literal 24476
+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
+
